@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+}
+
+.index-header {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  background-color: #E8D9C5;
+  font-family: "Lobster", sans-serif;
+  color: #A6763C;
+  font-size: 18px;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  box-shadow: 0 0 10px gray;
+}
+
+.index-header-introduction {
+  margin: 0;
+  height: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 60px;
+}
+.index-header-introduction h1 {
+  z-index: 2;
+  position: relative;
+  margin: 0%;
+  text-align: center;
+  font-size: 32px;
+  top: -5%;
+  font-family: "Science Gothic", sans-serif;
+  font-weight: 800;
+  color: rgb(233, 229, 216);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+  -webkit-text-stroke: 1px rgb(95, 95, 95);
+}
+.index-header-introduction span {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  margin: 0%;
+  font-size: 30px;
+  top: 1%;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  color: rgb(233, 229, 216);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+  -webkit-text-stroke: 1px rgb(95, 95, 95);
+}
+.index-header-introduction::before {
+  background-image: url("/img/bg.png");
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(3px);
+  z-index: 1;
+  content: "";
+  inset: 0;
+}
+
+.burger-menu {
+  position: absolute;
+  left: 85%;
+}
+.burger-menu div {
+  width: 43px;
+  height: 5px;
+  background: linear-gradient(190deg, rgb(175, 175, 175), rgb(240, 240, 240));
+  margin-top: 5px;
+  border: 1px solid rgb(147, 147, 147);
+}
+
+.index-main {
+  height: 100vh;
+  background-color: #E8D9C5;
+  position: relative;
+  top: 60px;
+}
+
+/*# sourceMappingURL=style.css.map */
