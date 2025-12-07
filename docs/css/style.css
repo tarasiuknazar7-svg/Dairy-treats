@@ -1,0 +1,320 @@
+body {
+  margin: 0;
+  background-color: #E8D9C5;
+  overflow: none;
+}
+
+.index-header {
+  z-index: 4;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E8D9C5;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 0 10px gray;
+}
+.index-header h1 {
+  font-size: 33px;
+  color: #A6763C;
+  font-family: "Lobster", sans-serif;
+}
+
+.burger-menu {
+  position: absolute;
+  right: 5%;
+  top: 22%;
+  z-index: 1;
+}
+.burger-menu div {
+  width: 43px;
+  height: 5px;
+  background: linear-gradient(190deg, rgb(175, 175, 175), rgb(240, 240, 240));
+  margin-top: 5px;
+  border: 1px solid rgb(147, 147, 147);
+}
+
+.burger-menu-links {
+  padding-top: 40px;
+  height: 100%;
+  z-index: 3;
+  position: fixed;
+  right: 0;
+  top: 30px;
+  flex-direction: column;
+  width: 160px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in;
+  background-color: #5a7559;
+  border-left: 2px solid rgb(72, 108, 52);
+}
+.burger-menu-links hr {
+  border: 1px solid;
+  width: 80%;
+  color: rgb(166, 115, 47);
+}
+.burger-menu-links.active {
+  transform: translateX(0);
+}
+.burger-menu-links a {
+  display: flex;
+  justify-content: center;
+  color: #E8D9C5;
+  font-size: 27px;
+  text-decoration: none;
+  font-family: "Science Gothic", sans-serif;
+}
+
+.index-header-introduction {
+  margin: 0;
+  height: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 60px;
+}
+.index-header-introduction h2 {
+  z-index: 2;
+  margin-top: -3%;
+  text-align: center;
+  font-size: 32px;
+  font-family: "Science Gothic", sans-serif;
+  font-weight: 800;
+  color: rgb(233, 229, 216);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+  -webkit-text-stroke: 1px rgb(95, 95, 95);
+}
+.index-header-introduction span {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  margin: 0%;
+  font-size: 30px;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  color: rgb(233, 229, 216);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+  -webkit-text-stroke: 1px rgb(95, 95, 95);
+}
+.index-header-introduction::before {
+  background-image: url("../img/bg.png");
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(3px);
+  z-index: 1;
+  content: "";
+  inset: 0;
+}
+
+.index-main {
+  height: 100%;
+  background-color: #E8D9C5;
+  position: relative;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.index-main1 {
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+}
+.index-main1 img {
+  width: auto;
+  height: 250px;
+  position: relative;
+  left: -3%;
+  opacity: 0;
+  animation: yogurt 3s ease forwards;
+}
+@keyframes yogurt {
+  to {
+    opacity: 1;
+  }
+}
+.index-main1 span {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto -10px;
+  font-size: 30px;
+  font-family: "Yeseva One", serif;
+  color: #ECD9A0;
+}
+.index-main1 p {
+  font-size: 100%;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  width: 100%;
+  word-spacing: 1%;
+  color: #E8D9C5;
+}
+.index-main1 div {
+  width: 67%;
+  text-align: justify;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: -2%;
+  background-color: #6C8F6B;
+  padding: 10px;
+  border: 1px solid rgb(221, 200, 161);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147);
+  transform: translateX(110%);
+  animation: block1 2s ease forwards;
+}
+@keyframes block1 {
+  to {
+    right: 78%;
+  }
+}
+
+.index-main2 {
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.index-main2 img {
+  position: absolute;
+  right: -11%;
+  transform: rotate(90deg);
+  opacity: 0;
+  animation: syrok 5s ease forwards;
+  animation-delay: 2s;
+}
+@keyframes syrok {
+  to {
+    opacity: 1;
+  }
+}
+.index-main2 span {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto -10px;
+  font-size: 27px;
+  font-family: "Yeseva One", serif;
+  color: #ECD9A0;
+}
+.index-main2 p {
+  font-size: 100%;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  width: 100%;
+  word-spacing: 1%;
+  color: #E8D9C5;
+}
+.index-main2 div {
+  width: 60%;
+  text-align: justify;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: -12%;
+  background-color: #6C8F6B;
+  padding: 10px;
+  border: 1px solid rgb(221, 200, 161);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147);
+  transform: translateX(-110%);
+  animation: block2 2s ease forwards;
+  animation-delay: 2s;
+}
+@keyframes block2 {
+  to {
+    left: 60%;
+  }
+}
+
+.index-main3 {
+  margin-top: 13%;
+  margin-bottom: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+.index-main3 img {
+  width: auto;
+  height: 250px;
+  position: relative;
+}
+.index-main3 span {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto -10px;
+  font-size: 30px;
+  font-family: "Yeseva One", serif;
+  color: #ECD9A0;
+}
+.index-main3 p {
+  font-size: 100%;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  width: 100%;
+  word-spacing: 1%;
+  color: #E8D9C5;
+}
+.index-main3 div {
+  width: 85%;
+  text-align: justify;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #6C8F6B;
+  padding: 10px;
+  border: 1px solid rgb(221, 200, 161);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147);
+  opacity: 0;
+  animation: block3 3s ease forwards;
+  animation-delay: 4s;
+}
+@keyframes block3 {
+  to {
+    opacity: 1;
+  }
+}
+.index-main3 button {
+  background: linear-gradient(135deg, #ffb6a0 0%, #ff7d7d 100%);
+  color: #3a3a3a;
+  box-shadow: 0 0 15px rgb(253, 151, 151);
+  height: 30px;
+  width: 200px;
+  border-radius: 3px;
+  border: 0px;
+  font-size: 20px;
+  font-family: "Dela Gothic One", sans-serif;
+  margin: 0 auto;
+  opacity: 0;
+  animation: index-btn 1s ease forwards;
+  animation-delay: 7s;
+}
+@keyframes index-btn {
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
