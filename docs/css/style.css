@@ -1,7 +1,14 @@
+.index-main3 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   margin: 0;
   background-color: #E8D9C5;
-  overflow: none;
+  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .index-header {
@@ -16,6 +23,8 @@ body {
   box-shadow: 0 0 10px gray;
 }
 .index-header h1 {
+  display: flex;
+  justify-content: center;
   font-size: 33px;
   color: #A6763C;
   font-family: "Lobster", sans-serif;
@@ -78,9 +87,9 @@ body {
 }
 .index-header-introduction h2 {
   z-index: 2;
-  margin-top: -3%;
+  margin: -3% 0 0 0;
   text-align: center;
-  font-size: 32px;
+  font-size: 28px;
   font-family: "Science Gothic", sans-serif;
   font-weight: 800;
   color: rgb(233, 229, 216);
@@ -92,7 +101,7 @@ body {
   position: relative;
   text-align: center;
   margin: 0%;
-  font-size: 30px;
+  font-size: 27px;
   font-family: "Oswald", sans-serif;
   font-weight: bold;
   color: rgb(233, 229, 216);
@@ -118,6 +127,7 @@ body {
   top: 60px;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .index-main1 {
@@ -126,8 +136,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  position: relative;
-  overflow: hidden;
 }
 .index-main1 img {
   width: auto;
@@ -161,19 +169,18 @@ body {
   color: #E8D9C5;
 }
 .index-main1 div {
-  width: 67%;
-  text-align: justify;
+  width: 69%;
   height: max-content;
   display: flex;
   flex-direction: column;
   position: relative;
-  right: -2%;
+  right: -5%;
   background-color: #6C8F6B;
   padding: 10px;
   border: 1px solid rgb(221, 200, 161);
   border-radius: 15px;
   box-shadow: 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147);
-  transform: translateX(110%);
+  transform: translateX(105%);
   animation: block1 2s ease forwards;
 }
 @keyframes block1 {
@@ -190,11 +197,12 @@ body {
   flex-direction: row;
 }
 .index-main2 img {
-  position: absolute;
-  right: -11%;
-  transform: rotate(90deg);
+  width: auto;
+  height: 250px;
+  position: relative;
+  left: 3%;
   opacity: 0;
-  animation: syrok 5s ease forwards;
+  animation: syrok 3s ease forwards;
   animation-delay: 2s;
 }
 @keyframes syrok {
@@ -222,12 +230,11 @@ body {
 }
 .index-main2 div {
   width: 60%;
-  text-align: justify;
   height: max-content;
   display: flex;
   flex-direction: column;
   position: relative;
-  left: -12%;
+  left: -5%;
   background-color: #6C8F6B;
   padding: 10px;
   border: 1px solid rgb(221, 200, 161);
@@ -239,7 +246,7 @@ body {
 }
 @keyframes block2 {
   to {
-    left: 60%;
+    left: 70%;
   }
 }
 
@@ -277,7 +284,6 @@ body {
 }
 .index-main3 div {
   width: 85%;
-  text-align: justify;
   height: max-content;
   display: flex;
   flex-direction: column;
@@ -297,9 +303,9 @@ body {
   }
 }
 .index-main3 button {
-  background: linear-gradient(135deg, #ffb6a0 0%, #ff7d7d 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #3a3a3a;
-  box-shadow: 0 0 15px rgb(253, 151, 151);
+  box-shadow: 0 0 15px rgb(151, 166, 253);
   height: 30px;
   width: 200px;
   border-radius: 3px;
@@ -310,6 +316,7 @@ body {
   opacity: 0;
   animation: index-btn 1s ease forwards;
   animation-delay: 7s;
+  padding-bottom: 5px;
 }
 @keyframes index-btn {
   to {
