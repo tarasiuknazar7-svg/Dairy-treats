@@ -1,3 +1,10 @@
+.login-form, .index-main3 div, .index-main2 div, .index-main1 div {
+  background-color: #6C8F6B;
+  border: 1px solid rgb(221, 200, 161);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147);
+}
+
 .index-main3 button {
   display: flex;
   justify-content: center;
@@ -175,11 +182,7 @@ body {
   flex-direction: column;
   position: relative;
   right: -5%;
-  background-color: #6C8F6B;
   padding: 10px;
-  border: 1px solid rgb(221, 200, 161);
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147);
   transform: translateX(105%);
   animation: block1 2s ease forwards;
 }
@@ -235,11 +238,7 @@ body {
   flex-direction: column;
   position: relative;
   left: -5%;
-  background-color: #6C8F6B;
   padding: 10px;
-  border: 1px solid rgb(221, 200, 161);
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147);
   transform: translateX(-110%);
   animation: block2 2s ease forwards;
   animation-delay: 2s;
@@ -288,11 +287,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #6C8F6B;
   padding: 10px;
-  border: 1px solid rgb(221, 200, 161);
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147);
   opacity: 0;
   animation: block3 3s ease forwards;
   animation-delay: 4s;
@@ -322,6 +317,58 @@ body {
   to {
     opacity: 1;
   }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #ECD9A0;
+}
+
+.login-form {
+  margin: 0 auto;
+  position: relative;
+  top: 170px;
+  width: 320px;
+  height: 400px;
+  opacity: 0;
+  animation: login-form 2s ease forwards;
+}
+@keyframes login-form {
+  to {
+    opacity: 1;
+  }
+}
+.login-form label {
+  margin-top: 20px;
+}
+.login-form input {
+  background: none;
+  border: 2px solid;
+  border-image: linear-gradient(10deg, rgb(230, 153, 38), #E8D9C5) 1;
+  outline: none;
+  margin: 10px auto 10px;
+  width: 220px;
+  color: #ECD9A0;
+  font-family: "Science Gothic", sans-serif;
+}
+.login-form button {
+  margin-top: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #3a3a3a;
+  box-shadow: 0 0 15px rgb(151, 166, 253);
+  height: 30px;
+  width: max-content;
+  border-radius: 3px;
+  border: 0px;
+  font-size: 20px;
+  font-family: "Dela Gothic One", sans-serif;
+}
+.login-form span {
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

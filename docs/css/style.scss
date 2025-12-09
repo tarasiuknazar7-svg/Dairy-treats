@@ -6,6 +6,7 @@
 $color1: #6C8F6B;
 $color2: #A6763C;
 $color3: #E8D9C5;
+$color4: #ECD9A0;
 // ======================
 
 // Шрифти
@@ -16,8 +17,13 @@ $font4:"Yeseva One", serif;
 $font5:"Dela Gothic One", sans-serif;
 // ======================
 
-// Рамки
-$border:1px solid rgb(221, 200, 161);
+// Рамка
+%frame{
+    background-color: $color1;
+    border:1px solid rgb(221, 200, 161);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(147,147,147), 0 0 20px rgb(147,147,147), 0 0 20px rgb(147,147,147);
+}
 // ======================
 
 // Центрування
@@ -180,7 +186,7 @@ span{
     margin: 10px auto -10px;
     font-size: 30px;
     font-family: $font4;
-    color: #ECD9A0;
+    color: $color4;
 }
 p{
     font-size: 100%;
@@ -199,11 +205,8 @@ div{
     flex-direction: column;
     position: relative;
     right: -5%;
-    background-color: $color1;
     padding: 10px;
-    border:1px solid rgb(221, 200, 161);
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgb(147,147,147), 0 0 20px rgb(147,147,147), 0 0 20px rgb(147,147,147);
+    @extend %frame;
     transform: translateX(105%);
     animation: block1 2s ease forwards;
 @keyframes block1 {
@@ -236,7 +239,7 @@ span{
     margin: 10px auto -10px;
     font-size: 27px;
     font-family: $font4;
-    color: #ECD9A0;
+    color: $color4;
 }
 p{
     font-size: 100%;
@@ -255,11 +258,8 @@ div{
     flex-direction: column;
     position: relative;
     left: -5%;
-    background-color: $color1;
     padding: 10px;
-    border:1px solid rgb(221, 200, 161);
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgb(147,147,147), 0 0 20px rgb(147,147,147), 0 0 20px rgb(147,147,147);
+    @extend %frame;
     transform: translateX(-110%);
     animation: block2 2s ease forwards;
     animation-delay: 2s;
@@ -288,7 +288,7 @@ span{
     margin: 10px auto -10px;
     font-size: 30px;
     font-family: $font4;
-    color: #ECD9A0;
+    color: $color4;
 }
 p{
     font-size: 100%;
@@ -306,11 +306,8 @@ div{
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: $color1;
     padding: 10px;
-    border:1px solid rgb(221, 200, 161);
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgb(147,147,147), 0 0 20px rgb(147,147,147), 0 0 20px rgb(147,147,147);
+    @extend %frame;
     opacity: 0;
     animation: block3 3s ease forwards;
     animation-delay: 4s;
@@ -340,3 +337,58 @@ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 }
 // ======================
+
+
+
+//login.html
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: $color4;
+}
+
+.login-form{
+    margin: 0 auto;
+    position: relative;
+    top: 170px;
+    @extend %frame;
+    width:320px;
+    height: 400px;
+    opacity: 0;
+    animation: login-form 2s ease forwards;
+@keyframes login-form {
+    to {opacity: 1;}
+}
+label{
+    margin-top: 20px;
+}
+input{
+    background:none;
+    border: 2px solid;
+    border-image: linear-gradient(10deg, rgb(230, 153, 38), $color3) 1;
+    outline: none;
+    margin: 10px auto 10px;
+    width: 220px;
+    color:$color4;
+    font-family: $font1;
+}
+button{
+    margin-top:10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #3a3a3a;
+    box-shadow: 0 0 15px rgb(151, 166, 253);
+    height:30px;
+    width:max-content;
+    border-radius: 3px;
+    border:0px;
+    font-size: 20px;
+    font-family:$font5;
+}
+span{
+    margin-top: 30px;
+}
+}
