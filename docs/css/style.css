@@ -1,11 +1,11 @@
-.login-form, .index-main3 div, .index-main2 div, .index-main1 div {
+.registration-form, .contacts, .contacts-map, .contacts-form, .contacts-introduction, .login-form, .index-main3 div, .index-main2 div, .index-main1 div {
   background-color: #6C8F6B;
   border: 1px solid rgb(221, 200, 161);
   border-radius: 15px;
   box-shadow: 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147);
 }
 
-.index-main3 button {
+.registration-interactive, .contacts span, .contacts-map span, .contacts-introduction span, .contacts-main, .login-interactive, form, .index-main3 button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -320,10 +320,7 @@ body {
 }
 
 form {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-size: 30px;
   color: #ECD9A0;
 }
@@ -355,7 +352,15 @@ form {
   color: #ECD9A0;
   font-family: "Science Gothic", sans-serif;
 }
-.login-form button {
+.login-form span {
+  margin-top: 30px;
+}
+
+.login-interactive {
+  display: flex;
+  flex-direction: column;
+}
+.login-interactive button {
   margin-top: 10px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #3a3a3a;
@@ -367,8 +372,176 @@ form {
   font-size: 20px;
   font-family: "Dela Gothic One", sans-serif;
 }
-.login-form span {
+.login-interactive span {
+  font-size: 30px;
+  color: #ECD9A0;
+}
+
+.contacts-main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contacts-introduction {
+  width: 330px;
+  margin-top: 100px;
+  opacity: 0;
+  animation: contacts-block1 2s ease forwards;
+}
+@keyframes contacts-block1 {
+  to {
+    opacity: 1;
+  }
+}
+.contacts-introduction span {
+  font-family: "Yeseva One", serif;
+  font-size: 22px;
+  margin: 10px auto -5px;
+  color: #ECD9A0;
+}
+.contacts-introduction ul {
+  font-family: "Oswald", sans-serif;
+  color: #E8D9C5;
+}
+
+.contacts-form {
+  width: 330px;
+  opacity: 0;
+  animation: contacts-block2 2s ease forwards;
+  animation-delay: 1s;
+}
+@keyframes contacts-block2 {
+  to {
+    opacity: 1;
+  }
+}
+.contacts-form input {
+  background: none;
+  border: 2px solid;
+  border-image: linear-gradient(10deg, rgb(230, 153, 38), #E8D9C5) 1;
+  outline: none;
+  margin: 10px auto 10px;
+  width: 220px;
+  color: #ECD9A0;
+  font-family: "Science Gothic", sans-serif;
+}
+.contacts-form textarea {
+  background-color: #6a6a6a;
+  border: 2px solid;
+  border-image: linear-gradient(10deg, rgb(230, 153, 38), #E8D9C5) 1;
+  outline: none;
+  margin: 10px auto 10px;
+  width: 220px;
+  height: 130px;
+  color: #ECD9A0;
+  font-family: "Science Gothic", sans-serif;
+}
+.contacts-form button {
+  width: 140px;
+  height: 30px;
+  font-family: "Science Gothic", sans-serif;
+  font-size: 20px;
+  margin: 10px auto 20px;
+  background: linear-gradient(100deg, #A6763C, #E8D9C5);
+  border: none;
+  border-radius: 5px;
+}
+
+.contacts-map {
+  width: 330px;
+  opacity: 0;
+  animation: contacts-block3 2s ease forwards;
+  animation-delay: 2s;
+}
+@keyframes contacts-block3 {
+  to {
+    opacity: 1;
+  }
+}
+.contacts-map span {
+  font-family: "Yeseva One", serif;
+  font-size: 30px;
+  margin: 15px auto -10px;
+  color: #ECD9A0;
+}
+.contacts-map iframe {
+  width: 290px;
+  height: 200px;
+  margin: 6%;
+}
+
+.contacts {
+  width: 330px;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: contacts-block4 2s ease forwards;
+  animation-delay: 3s;
+}
+@keyframes contacts-block4 {
+  to {
+    opacity: 1;
+  }
+}
+.contacts span {
+  font-family: "Yeseva One", serif;
+  font-size: 30px;
+  margin: 10px auto -5px;
+  color: #ECD9A0;
+}
+.contacts a {
+  color: #E8D9C5;
+}
+
+form {
+  flex-direction: column;
+  font-size: 30px;
+  color: #ECD9A0;
+}
+
+.registration-form {
+  margin: 0 auto;
+  position: relative;
+  top: 170px;
+  width: 320px;
+  height: 400px;
+  opacity: 0;
+  animation: login-form 2s ease forwards;
+}
+@keyframes login-form {
+  to {
+    opacity: 1;
+  }
+}
+.registration-form label {
+  margin-top: 10px;
+}
+.registration-form input {
+  background: none;
+  border: 2px solid;
+  border-image: linear-gradient(10deg, rgb(230, 153, 38), #E8D9C5) 1;
+  outline: none;
+  margin: 10px auto 10px;
+  width: 220px;
+  color: #ECD9A0;
+  font-family: "Science Gothic", sans-serif;
+}
+
+.registration-interactive {
+  display: flex;
+  flex-direction: column;
+}
+.registration-interactive button {
   margin-top: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #3a3a3a;
+  box-shadow: 0 0 15px rgb(151, 166, 253);
+  height: 30px;
+  width: max-content;
+  border-radius: 3px;
+  border: 0px;
+  font-size: 20px;
+  font-family: "Dela Gothic One", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

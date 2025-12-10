@@ -343,10 +343,8 @@ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 //login.html
 
 form{
-    display: flex;
+    @extend %display-flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-size: 30px;
     color: $color4;
 }
@@ -376,6 +374,14 @@ input{
     color:$color4;
     font-family: $font1;
 }
+span{
+    margin-top: 30px;
+}
+}
+.login-interactive{
+    display: flex;
+    flex-direction: column;
+    @extend %display-flex;
 button{
     margin-top:10px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -389,6 +395,184 @@ button{
     font-family:$font5;
 }
 span{
-    margin-top: 30px;
+    font-size: 30px;
+    color: $color4;
 }
 }
+// ======================
+
+
+
+// contacts.html
+
+.contacts-main{
+    display: flex;
+    flex-direction: column;
+    @extend %display-flex;
+    gap: 40px;
+}
+
+.contacts-introduction{
+    @extend %frame;
+    width: 330px;
+    margin-top: 100px;
+    opacity: 0;
+    animation: contacts-block1 2s ease forwards;
+@keyframes contacts-block1 {
+    to {opacity: 1}
+}
+span{
+    @extend %display-flex;
+    font-family: $font4;
+    font-size: 22px;
+    margin: 10px auto -5px;
+    color: $color4;
+}
+ul{
+    font-family: $font2;
+    color:$color3;
+}
+}
+
+.contacts-form{
+    @extend %frame;
+    width:330px;
+    opacity: 0;
+    animation: contacts-block2 2s ease forwards;
+    animation-delay: 1s;
+@keyframes contacts-block2 {
+    to {opacity: 1}
+}
+input{
+    background:none;
+    border: 2px solid;
+    border-image: linear-gradient(10deg, rgb(230, 153, 38), $color3) 1;
+    outline: none;
+    margin: 10px auto 10px;
+    width: 220px;
+    color:$color4;
+    font-family: $font1;
+}
+textarea{
+    background-color:#6a6a6a;
+    border: 2px solid;
+    border-image: linear-gradient(10deg, rgb(230, 153, 38), $color3) 1;
+    outline: none;
+    margin: 10px auto 10px;
+    width: 220px;
+    height: 130px;
+    color:$color4;
+    font-family: $font1;
+}
+button{
+    width: 140px;
+    height: 30px;
+    font-family: $font1;
+    font-size: 20px;
+    margin:10px auto 20px;
+    background: linear-gradient(100deg, $color2, $color3);
+    border: none;
+    border-radius: 5px;
+}
+}
+
+.contacts-map{
+    @extend %frame;
+    width: 330px;
+    opacity: 0;
+    animation: contacts-block3 2s ease forwards;
+    animation-delay: 2s;
+@keyframes contacts-block3 {
+    to {opacity: 1}
+}
+span{
+    @extend %display-flex;
+    font-family: $font4;
+    font-size: 30px;
+    margin: 15px auto -10px;
+    color: $color4;
+}
+iframe{
+    width:290px;
+    height: 200px;
+    margin: 6%;
+}
+}
+
+.contacts{
+    @extend %frame;
+    width: 330px;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: contacts-block4 2s ease forwards;
+    animation-delay: 3s;
+@keyframes contacts-block4 {
+    to {opacity: 1}
+}
+span{
+    @extend %display-flex;
+    font-family: $font4;
+    font-size: 30px;
+    margin: 10px auto -5px;
+    color: $color4;
+}
+a{
+    color:$color3;
+}
+}
+// ======================
+
+
+
+// registration.html
+form{
+    @extend %display-flex;
+    flex-direction: column;
+    font-size: 30px;
+    color: $color4;
+}
+
+.registration-form{
+    margin: 0 auto;
+    position: relative;
+    top: 170px;
+    @extend %frame;
+    width:320px;
+    height: 400px;
+    opacity: 0;
+    animation: login-form 2s ease forwards;
+@keyframes login-form {
+    to {opacity: 1;}
+}
+label{
+    margin-top: 10px;
+}
+input{
+    background:none;
+    border: 2px solid;
+    border-image: linear-gradient(10deg, rgb(230, 153, 38), $color3) 1;
+    outline: none;
+    margin: 10px auto 10px;
+    width: 220px;
+    color:$color4;
+    font-family: $font1;
+}
+}
+.registration-interactive{
+    display: flex;
+    flex-direction: column;
+    @extend %display-flex;
+button{
+    margin-top:30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #3a3a3a;
+    box-shadow: 0 0 15px rgb(151, 166, 253);
+    height:30px;
+    width:max-content;
+    border-radius: 3px;
+    border:0px;
+    font-size: 20px;
+    font-family:$font5;
+}
+}
+// ======================
