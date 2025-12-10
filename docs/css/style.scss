@@ -576,3 +576,52 @@ button{
 }
 }
 // ======================
+
+
+
+// shopping.html
+
+.shopping-cart{
+    width: 40px;
+    height: auto;
+    position: absolute;
+    left: 20px;
+}
+
+.shopping-main{
+    display: flex;
+    flex-direction: column;
+}
+
+.shopping-main > *:first-child{
+    margin-top: 100px;
+}
+
+.shopping-main > *:last-child{
+    margin-bottom: 60px;
+}
+
+.shopping-block1, .shopping-block2, .shopping-block3, .shopping-block4, .shopping-block5, .shopping-block6, .shopping-block7, .shopping-block8, .shopping-block9, .shopping-block10, .shopping-block11, .shopping-block12, .shopping-block13, .shopping-block14, .shopping-block15{
+    @extend %frame;
+    margin: 0 auto;
+    width: 270px;
+    margin-top: 100px;
+    margin-bottom: -50px;
+    height: max-content;
+    @extend %display-flex;
+    flex-direction: column;
+img{
+    height: 190px;
+    width: 220px;
+    margin-top: 20px;
+}
+p{
+    text-align: center;
+    width: 200px;
+    word-wrap: break-word;
+    color: $color3;
+    font-size: 25px;
+    margin: 10px;
+}
+}
+// ======================
