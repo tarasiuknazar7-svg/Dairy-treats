@@ -1,11 +1,20 @@
-.shopping-block1, .shopping-block2, .shopping-block3, .shopping-block4, .shopping-block5, .shopping-block6, .shopping-block7, .shopping-block8, .shopping-block9, .shopping-block10, .shopping-block11, .shopping-block12, .shopping-block13, .shopping-block14, .shopping-block15, .registration-form, .contacts, .contacts-map, .contacts-form, .contacts-introduction, .login-form, .index-main3 div, .index-main2 div, .index-main1 div {
+.shopping-block1, .shopping-block2, .shopping-block3, .shopping-block4, .shopping-block5, .shopping-block6, .shopping-block7, .shopping-block8, .shopping-block9, .shopping-block10, .shopping-block11, .shopping-block12, .shopping-block13, .shopping-block14, .shopping-block15, .registration-form, .contacts-form, .login-form, .index-main3 div, .index-main2 div, .index-main1 div {
   background-color: #6C8F6B;
   border: 1px solid rgb(221, 200, 161);
   border-radius: 15px;
   box-shadow: 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147), 0 0 20px rgb(147, 147, 147);
 }
 
-.shopping-block1, .shopping-block2, .shopping-block3, .shopping-block4, .shopping-block5, .shopping-block6, .shopping-block7, .shopping-block8, .shopping-block9, .shopping-block10, .shopping-block11, .shopping-block12, .shopping-block13, .shopping-block14, .shopping-block15, .registration-interactive, .contacts span, .contacts-map span, .contacts-introduction span, .contacts-main, .login-interactive, form, .index-main3 button {
+.registration-interactive button, .contacts-form button, .login-interactive button, .index-main3 button {
+  background: linear-gradient(135deg, rgb(94, 133, 89) 0%, rgb(115, 190, 75) 100%);
+  border: 1px solid rgb(33, 109, 37);
+  border-radius: 5px;
+  padding: 5px;
+  font-family: "Science Gothic", sans-serif;
+  font-size: 25px;
+}
+
+.shopping-block1, .shopping-block2, .shopping-block3, .shopping-block4, .shopping-block5, .shopping-block6, .shopping-block7, .shopping-block8, .shopping-block9, .shopping-block10, .shopping-block11, .shopping-block12, .shopping-block13, .shopping-block14, .shopping-block15, .registration-interactive button, .registration-interactive, .registration-form input, .registration-main, .contacts-form button, .contacts-form textarea, .contacts-form input, .contacts-form h2, .contacts-main, .login-interactive button, .login-interactive, .login-form input, .login-main, .index-main3 button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -298,15 +307,7 @@ body {
   }
 }
 .index-main3 button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #3a3a3a;
-  box-shadow: 0 0 15px rgb(151, 166, 253);
-  height: 30px;
-  width: 200px;
-  border-radius: 3px;
-  border: 0px;
-  font-size: 20px;
-  font-family: "Dela Gothic One", sans-serif;
+  width: max-content;
   margin: 0 auto;
   opacity: 0;
   animation: index-btn 1s ease forwards;
@@ -319,73 +320,9 @@ body {
   }
 }
 
-form {
-  flex-direction: column;
-  font-size: 30px;
-  color: #ECD9A0;
-}
-
-.login-form {
-  margin: 0 auto;
+.login-main {
   position: relative;
-  top: 170px;
-  width: 320px;
-  height: 400px;
-  opacity: 0;
-  animation: login-form 2s ease forwards;
-}
-@keyframes login-form {
-  to {
-    opacity: 1;
-  }
-}
-.login-form label {
-  margin-top: 20px;
-}
-.login-form input {
-  background: none;
-  border: 2px solid;
-  border-image: linear-gradient(10deg, rgb(230, 153, 38), #E8D9C5) 1;
-  outline: none;
-  margin: 10px auto 10px;
-  width: 220px;
-  color: #ECD9A0;
-  font-family: "Science Gothic", sans-serif;
-}
-.login-form span {
-  margin-top: 30px;
-}
-
-.login-interactive {
-  display: flex;
-  flex-direction: column;
-}
-.login-interactive button {
-  margin-top: 10px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #3a3a3a;
-  box-shadow: 0 0 15px rgb(151, 166, 253);
-  height: 30px;
-  width: max-content;
-  border-radius: 3px;
-  border: 0px;
-  font-size: 20px;
-  font-family: "Dela Gothic One", sans-serif;
-}
-.login-interactive span {
-  font-size: 30px;
-  color: #ECD9A0;
-}
-
-.contacts-main {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.contacts-introduction {
-  width: 330px;
-  margin-top: 100px;
+  top: 190px;
   opacity: 0;
   animation: contacts-block1 2s ease forwards;
 }
@@ -394,27 +331,91 @@ form {
     opacity: 1;
   }
 }
-.contacts-introduction span {
-  font-family: "Yeseva One", serif;
-  font-size: 22px;
-  margin: 10px auto -5px;
-  color: #ECD9A0;
+
+.login-form {
+  width: 330px;
+  height: max-content;
 }
-.contacts-introduction ul {
-  font-family: "Oswald", sans-serif;
-  color: #E8D9C5;
+.login-form form {
+  display: block;
+  margin-top: 20px;
+}
+.login-form label {
+  margin-left: 12px;
+  color: #ECD9A0;
+  font-size: 25px;
+}
+.login-form input {
+  background: none;
+  border: 2px solid;
+  border-image: linear-gradient(10deg, rgb(230, 153, 38), #E8D9C5) 1;
+  outline: none;
+  margin: 10px auto 10px;
+  width: 295px;
+  color: #ECD9A0;
+  font-family: "Science Gothic", sans-serif;
+}
+
+.login-interactive {
+  display: flex;
+  flex-direction: column;
+}
+.login-interactive button {
+  margin: 10px auto 13px;
+  color: #3a3a3a;
+  height: max-content;
+  width: 200px;
+  padding: 5px;
+}
+.login-interactive span {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  color: #ECD9A0;
+  text-align: center;
+}
+.login-interactive a {
+  text-decoration: none;
+  color: #ECD9A0;
+  margin-bottom: 10px;
+}
+
+.contacts-main {
+  position: relative;
+  top: 80px;
+  opacity: 0;
+  animation: contacts-block1 2s ease forwards;
+}
+@keyframes contacts-block1 {
+  to {
+    opacity: 1;
+  }
 }
 
 .contacts-form {
   width: 330px;
-  opacity: 0;
-  animation: contacts-block2 2s ease forwards;
-  animation-delay: 1s;
 }
-@keyframes contacts-block2 {
-  to {
-    opacity: 1;
-  }
+.contacts-form form {
+  display: block;
+}
+.contacts-form h2 {
+  color: #ECD9A0;
+  font-size: 30px;
+  margin: 15px auto 10px;
+}
+.contacts-form p {
+  color: #E8D9C5;
+  margin: 10px;
+  text-align: center;
+}
+.contacts-form hr {
+  width: 280px;
+  border: 1px solid rgb(70, 127, 75);
+}
+.contacts-form label {
+  margin-left: 12px;
+  color: #ECD9A0;
+  font-size: 24px;
 }
 .contacts-form input {
   background: none;
@@ -422,9 +423,16 @@ form {
   border-image: linear-gradient(10deg, rgb(230, 153, 38), #E8D9C5) 1;
   outline: none;
   margin: 10px auto 10px;
-  width: 220px;
+  width: 295px;
   color: #ECD9A0;
   font-family: "Science Gothic", sans-serif;
+}
+.contacts-form input[type=number]::-webkit-inner-spin-button, .contacts-form input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.contacts-form input[type=number] {
+  -moz-appearance: textfield;
 }
 .contacts-form textarea {
   background-color: #6a6a6a;
@@ -432,89 +440,40 @@ form {
   border-image: linear-gradient(10deg, rgb(230, 153, 38), #E8D9C5) 1;
   outline: none;
   margin: 10px auto 10px;
-  width: 220px;
+  width: 295px;
   height: 130px;
   color: #ECD9A0;
   font-family: "Science Gothic", sans-serif;
 }
 .contacts-form button {
-  width: 140px;
-  height: 30px;
-  font-family: "Science Gothic", sans-serif;
-  font-size: 20px;
-  margin: 10px auto 20px;
-  background: linear-gradient(100deg, #A6763C, #E8D9C5);
-  border: none;
-  border-radius: 5px;
+  width: max-content;
+  margin: 20px auto 20px;
 }
 
-.contacts-map {
-  width: 330px;
+.registration-main {
+  position: relative;
+  top: 190px;
   opacity: 0;
-  animation: contacts-block3 2s ease forwards;
-  animation-delay: 2s;
+  animation: contacts-block1 2s ease forwards;
 }
-@keyframes contacts-block3 {
+@keyframes contacts-block1 {
   to {
     opacity: 1;
   }
-}
-.contacts-map span {
-  font-family: "Yeseva One", serif;
-  font-size: 30px;
-  margin: 15px auto -10px;
-  color: #ECD9A0;
-}
-.contacts-map iframe {
-  width: 290px;
-  height: 200px;
-  margin: 6%;
-}
-
-.contacts {
-  width: 330px;
-  margin-bottom: 40px;
-  opacity: 0;
-  animation: contacts-block4 2s ease forwards;
-  animation-delay: 3s;
-}
-@keyframes contacts-block4 {
-  to {
-    opacity: 1;
-  }
-}
-.contacts span {
-  font-family: "Yeseva One", serif;
-  font-size: 30px;
-  margin: 10px auto -5px;
-  color: #ECD9A0;
-}
-.contacts a {
-  color: #E8D9C5;
-}
-
-form {
-  flex-direction: column;
-  font-size: 30px;
-  color: #ECD9A0;
 }
 
 .registration-form {
-  margin: 0 auto;
-  position: relative;
-  top: 170px;
-  width: 320px;
-  height: 400px;
-  opacity: 0;
-  animation: login-form 2s ease forwards;
+  width: 330px;
+  height: max-content;
 }
-@keyframes login-form {
-  to {
-    opacity: 1;
-  }
+.registration-form form {
+  display: block;
+  margin-top: 20px;
 }
 .registration-form label {
-  margin-top: 10px;
+  margin-left: 12px;
+  color: #ECD9A0;
+  font-size: 25px;
 }
 .registration-form input {
   background: none;
@@ -522,7 +481,7 @@ form {
   border-image: linear-gradient(10deg, rgb(230, 153, 38), #E8D9C5) 1;
   outline: none;
   margin: 10px auto 10px;
-  width: 220px;
+  width: 295px;
   color: #ECD9A0;
   font-family: "Science Gothic", sans-serif;
 }
@@ -532,16 +491,10 @@ form {
   flex-direction: column;
 }
 .registration-interactive button {
-  margin-top: 30px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 10px auto 13px;
   color: #3a3a3a;
-  box-shadow: 0 0 15px rgb(151, 166, 253);
-  height: 30px;
   width: max-content;
-  border-radius: 3px;
-  border: 0px;
-  font-size: 20px;
-  font-family: "Dela Gothic One", sans-serif;
+  padding: 5px;
 }
 
 .shopping-cart {
@@ -552,8 +505,8 @@ form {
 }
 
 .shopping-main {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 195px);
 }
 
 .shopping-main > *:first-child {
@@ -566,16 +519,16 @@ form {
 
 .shopping-block1, .shopping-block2, .shopping-block3, .shopping-block4, .shopping-block5, .shopping-block6, .shopping-block7, .shopping-block8, .shopping-block9, .shopping-block10, .shopping-block11, .shopping-block12, .shopping-block13, .shopping-block14, .shopping-block15 {
   margin: 0 auto;
-  width: 270px;
-  margin-top: 100px;
-  margin-bottom: -50px;
+  width: 160px;
   height: max-content;
+  margin-top: 100px;
+  margin-bottom: -60px;
   flex-direction: column;
 }
 .shopping-block1 img, .shopping-block2 img, .shopping-block3 img, .shopping-block4 img, .shopping-block5 img, .shopping-block6 img, .shopping-block7 img, .shopping-block8 img, .shopping-block9 img, .shopping-block10 img, .shopping-block11 img, .shopping-block12 img, .shopping-block13 img, .shopping-block14 img, .shopping-block15 img {
-  height: 190px;
-  width: 220px;
-  margin-top: 20px;
+  height: 120px;
+  width: 143px;
+  margin-top: 10px;
 }
 .shopping-block1 p, .shopping-block2 p, .shopping-block3 p, .shopping-block4 p, .shopping-block5 p, .shopping-block6 p, .shopping-block7 p, .shopping-block8 p, .shopping-block9 p, .shopping-block10 p, .shopping-block11 p, .shopping-block12 p, .shopping-block13 p, .shopping-block14 p, .shopping-block15 p {
   text-align: center;
